@@ -90,7 +90,7 @@ app.get('/id=:id', async(req,res) => {
             res.json({ message: "Enter the required credentials" })
         } catch (error) {
             console.log(error);
-            res.json({ message: "OOPS.." });
+            res.json({ error });
         }
     } else if (staffs.length > students.length) {
         const date = new Date();
@@ -110,7 +110,7 @@ app.get('/id=:id', async(req,res) => {
             ((find_staff.length)%2 === 0)? res.json({ message: "Staff Entry Registered" }) : res.json({ message: "Staff Exit Registered" });
         } catch (error) {
             console.log(error);
-            res.json({ message: "OOPS.." });
+            res.json({ error });
         }
     } else if (students.length > staffs.length) {
         const date = new Date();
@@ -131,7 +131,7 @@ app.get('/id=:id', async(req,res) => {
             ((find_student.length)%2 === 0)? res.json({ message: "Student Entry Registered" }) : res.json({ message: "Student Exit Registered" });
         } catch (error) {
             console.log(error);
-            res.json({ message: "OOPS.." });
+            res.json({ error });
         }
     }
 });
