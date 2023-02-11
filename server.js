@@ -12,7 +12,7 @@ const studentCount = require('./model/studentCount');
 
 const io = new Server(server, {
     cors: {
-        origin: '*'
+        origin: 'http://localhost:5173'
     }
 });
 
