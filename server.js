@@ -42,7 +42,7 @@ app.use('/gettotal', totalRoute);
 
 const Port = process.env.PORT || 7000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/RFID',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open',()=>console.log('Connected to the database'));
 
 server.listen(Port,()=>console.log('server running on port 7000'));
